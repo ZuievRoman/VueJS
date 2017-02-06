@@ -10,20 +10,13 @@
 <body>
 <div id="app">
 
-    <header>
-        <button @click="show = !show">
-            <i class="ion-navicon"></i>
-        </button>
-    </header>
-    <!--v-show looks like css display-->
-
-    <transition name="slide">
-        <aside v-if="show"></aside>
-    </transition>
+    <textarea v-model="input"></textarea>
+    <div id="result">{{{ input | emoji }}}</div>
 
 </div>
 <footer>
     <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/vue2-filters/dist/vue2-filters.min.js"></script>
     <script src="js/main.js"></script>
 </footer>
 </body>
