@@ -1,8 +1,20 @@
-
-
 new Vue({
     el: "#app",
     data: {
-        message: "Hello Roma"
+        bears: [
+            {
+                name: 'grizly',
+                status: false
+            }, {
+                name: 'beliy',
+                status: false
+            }, {
+                name: 'panda',
+                status: true
+            }, {
+                name: 'gubach',
+                status: false
+            }
+        ]
     }
-})
+});

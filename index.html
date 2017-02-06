@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>VueJS</title>
@@ -7,11 +7,10 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
-
-        <input type="text" v-model="message">
-
-        <pre>{{ $data | json }}</pre>
+        <ul>
+            <!--v-bind:class or :class-->
+            <li v-for="bear in bears" :class="{ 'strike': bear.status }">{{ bear.name }}</li>
+        </ul>
     </div>
 <footer>
     <script src="node_modules/vue/dist/vue.min.js"></script>
