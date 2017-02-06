@@ -1,19 +1,26 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>VueJS</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="app">
-    <!--v-on:keyup.enter or @keyup.enter-->
-    <input type="text" v-model="message" @keyup.enter="onClick">
 
-    <!--<form action="">-->
-        <!--&lt;!&ndash;doesn`t send form use .prevent or .stop&ndash;&gt;-->
-        <!--<button v-on:click.prevent="onClick">Кнопка</button>-->
-    <!--</form>-->
+    <header>
+        <button @click="show = !show">
+            <i class="ion-navicon"></i>
+        </button>
+    </header>
+    <!--v-show looks like css display-->
+
+    <transition name="slide">
+        <aside v-if="show"></aside>
+    </transition>
+
 </div>
 <footer>
     <script src="node_modules/vue/dist/vue.min.js"></script>
