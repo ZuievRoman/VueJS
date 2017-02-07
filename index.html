@@ -10,13 +10,20 @@
 <body>
 <div id="app">
 
-    <textarea v-model="input"></textarea>
-    <div id="result">{{{ input | emoji }}}</div>
+    <form>
+
+        <span>{{ count }} / 30</span>
+
+        <textarea v-model="text"></textarea>
+
+        <button v-if="count <= 30">Отправить</button>
+
+    </form>
 
 </div>
 <footer>
-    <script src="node_modules/vue/dist/vue.min.js"></script>
-    <script src="node_modules/vue2-filters/dist/vue2-filters.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+    <!--<script src="node_modules/vue/dist/vue.min.js"></script>-->
     <script src="js/main.js"></script>
 </footer>
 </body>
